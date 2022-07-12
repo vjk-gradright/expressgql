@@ -1,0 +1,20 @@
+interface Ifields {
+    [entity]: {
+        type: GQLTYPE,
+        resolve: Method,
+        args: Ifields
+        description: string
+    } 
+}
+
+interface IGraphQLObjectType {
+    name: 'entityName',
+    description: string,
+    fields: Ifields
+}
+
+interface IGraphQLSchema {
+    query: IGraphQLObjectType,
+    mutation: IGraphQLObjectType
+}
+

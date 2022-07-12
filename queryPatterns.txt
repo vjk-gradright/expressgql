@@ -1,0 +1,16 @@
+queryPatterns:
+
+Notes:
+? => optional
+[  ] => multiple entries of same type
+
+
+?query{
+    entity ?( [argEntity : argValue] ) 
+        {
+            entity ?( [argEntity : argValue] ) 
+                {
+                    ...
+                }
+        }
+}
