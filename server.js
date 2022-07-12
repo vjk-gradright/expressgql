@@ -114,15 +114,15 @@ const MutationQueryType = new GraphQLObjectType({
             description: 'add book',
             args: {
                 name: { type: GraphQLNonNull(GraphQLString)},
-                // authorId: { type: GraphQLNonNull(GraphQLInt)},
-                author: new GraphQLObjectType({
-                    name: 'addAuthor',
-                    fields: () => ({
-                        name:  {
-                            type: GraphQLNonNull(GraphQLString)
-                        }
-                    })
-                })
+                authorId: { type: GraphQLNonNull(GraphQLInt)},
+                // author: new GraphQLObjectType({
+                //     name: 'addAuthor',
+                //     fields: () => ({
+                //         name:  {
+                //             type: GraphQLNonNull(GraphQLString)
+                //         }
+                //     })
+                // })
                     
             },
             resolve: (parent, args) => {
